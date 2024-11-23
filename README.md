@@ -12,3 +12,4 @@ your console.log().
 5.Remove the console.log(), save the file and the 'use client' will disappear automatically, save again.
 
 HAPPY CODING!
+# server-console-log
