@@ -1,19 +1,27 @@
 # server-console-log : README 
 
-Display server-side console.log outputs directly in the browser's DevTools (Console tab) for easier debugging.
+This extension allows you to view server-side console.log() outputs directly in the browser's DevTools (Console tab), making debugging for Next.js projects (below version 15) more efficient and seamless.
 
-For Next.js projects below version 15. 
+# Features
 
-1. Open VSC Editor
+1. Automatically adds the use client directive in Server Components when console.log() is used, enabling   browser-side logging.
+2. Easily track logs in DevTools' Console tab without additional configuration.
 
-2. Cmd + shift + p
+# Setup & Usage
 
-3. Search for "Console Now" and click on it
+1. Open Visual Studio Code (VSC).
 
-4. Open any Server Component and add a console.log() and save the file; 'use client' will appear at the 
-top of the file automatically, save again, now if you open devtools(console tab) inside the browser you can see
-your console.log().
+2. Press Cmd + Shift + P to open the command palette.
 
-5. Remove the console.log(), save the file and the 'use client' will disappear automatically, save again.
+3. Search for "Console Now" and select the command.
 
-# HAPPY CODING!
+4. Open any Server Component in your Next.js project.
+
+5. Add a console.log() and save the file. The use client directive will appear at the top of the file automatically.
+
+6. Save the file again, and then open the DevTools Console tab in your browser to view the console.log() output.
+
+7. To remove the console log, delete it from the file and save again. The use client directive will automatically be removed.
+
+
+# HAPPY CODING! :)
