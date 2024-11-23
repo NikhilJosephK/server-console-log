@@ -1,0 +1,43 @@
+{
+  "name": "server-console-log",
+  "displayName": "Server Console Log",
+  "publisher": "NikhilJosephK",
+  "description": "Display server-side console.log outputs directly in the browser's DevTools (Console tab) for easier debugging.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikhilJosephK/server-console-log.git"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "server-console-log.isClient",
+        "title": "Console Now"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "1.94.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.2.1"
+  }
+}
