@@ -21,7 +21,7 @@ function activate(context) {
 	
 				// Case 1: Has console.log but no 'use client' - Add it
 				if (text.includes('console.log') && !text.includes('use client')) {
-					edit.insert(document.uri, new vscode.Position(0, 0), '"use client"\n\n');
+					edit.insert(document.uri, new vscode.Position(0, 0), '"use client" // added by Server Console Log\n\n');
 					vscode.workspace.applyEdit(edit).then(success => {
 						if (success) {
 							console.log('Successfully added "use client" directive');
@@ -31,7 +31,7 @@ function activate(context) {
 					});
 				}
 				// Case 2: No console.log but has 'use client' - Remove it
-				else if (!text.includes('console.log') && text.includes('use client')) {
+				else if (!text.includes('console.log') && text.includes('"use client" // added by Server Console Log')) {
 					// Find the range of 'use client' and any following whitespace
 					const lines = text.split('\n');
 					let lineIndex = 0;
